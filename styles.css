@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
+
+body {
+    margin: 0;
+    background: black;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+
+    --field-width: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    background: black url("background.avif") no-repeat fixed;
+    background-size: 100%;
+    position: relative;
+}
+
+.left {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    font-size: 0.7rem;
+}
+
+.left a {
+    color: white;
+    text-decoration: underline;
+}
+
+.credits {
+    margin: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: calc(100vh/3);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 30px 0;
+    width: 400px;
+    justify-content: center;
+    font-family: 'Skranji', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    background: rgb(0,0,0,0.5);
+    color: white;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height: 100vh;
+    width: 600px;
+}
+
+
+.right > div {
+    padding: 0px 50px;
+    height: calc(100vh/3);
+}
+
+
+.right > .top,
+.right > .bottom {
+    display: flex;
+    flex-direction: column;
+    background: #dfe2e357;
+}
+
+.right > .top {
+    justify-content: flex-end;
+}
+
+.right > .bottom {
+    justify-content: flex-start;
+}
+
+.right > .middle {
+    box-shadow: 0px 5px 5px #596d488b;
+}
+
+.right p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.right .bottom p {
+    font-size: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: var(--field-width)
+}
+
+form .row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+form label {
+    text-transform: uppercase;
+    color: grey;
+    font-size: 0.7rem;
+}
+
+input {
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 1.3rem;
+}
+
+input:focus,
+input:focus-visible {
+    border: 1px solid blue;
+    outline: none;
+    box-shadow: 3px 3px 3px #0000ff10;
+}
+
+button {
+    background: #596D48;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: none;
+    font-weight: bold;
+    border: none;
+    box-shadow: 3px 3px 5px #596D48;
+    max-width: 200px;
+    margin: 20px 0;
+}
+
+.pwerror {
+    border-color: red;
+}
+
+.pwerror::after {
+    content: "Passwords do not match";
+    color: orange;
+}
+
+#errormsg {
+    font-size: 0.8rem;
+    color: red;
+}
+
